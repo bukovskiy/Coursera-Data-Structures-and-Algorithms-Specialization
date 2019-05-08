@@ -1,13 +1,14 @@
 # Uses python3
 
-def fib(n,c):
-    if n in c:
-        return c[n]
-    else :
-        result = fib(n-1, c)+fib(n-2, c)
-        c[n]=result
-
-    return result
+def fibNonRecursive(n):
+    counter = 1
+    array=[0,1]
+    while counter < n:
+        number = array[counter]+array[counter-1]   
+#        print(number)
+        counter = counter+1
+        array.append(number)
+    return array[-1]
 
 
 
@@ -16,7 +17,7 @@ def main():
     n = int(input())
    
     
-    print(fib(n,c))
+    print(fibNonRecursive(n,c))
     
 
 if __name__ == "__main__":

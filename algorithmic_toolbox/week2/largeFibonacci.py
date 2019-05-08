@@ -28,13 +28,9 @@ def fibNonRecursive(n):
     
 def main():
     
-    n,m = map(int, input().split())
-    
-    pis = pisano(m)
-    
-    num = fibNonRecursive(n%pis)
-    
-    
+    n,m = map(int, input().split())   
+    pis = pisano(m)   
+    num = fibNonRecursive(n%pis)   
     print(num%m)
     
 
