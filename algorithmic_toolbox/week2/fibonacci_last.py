@@ -1,6 +1,8 @@
 # Uses python3
 
 def fibLast(n):
+    if n == 0:
+        return 0
     counter = 1
     array=[0,1]
     while counter < n:
